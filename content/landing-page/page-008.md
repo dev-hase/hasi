@@ -1,6 +1,5 @@
 ---
 title: page 08
 description: Expeditionen III
+pic: Expeditionen_III.jpg
 ---
-
-![image01](/landingpage/Expeditionen_III.jpg)
