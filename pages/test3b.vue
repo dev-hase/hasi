@@ -1,5 +1,5 @@
 <template>
-  <body class="bg-gray-200 py-5">
+  <body class="bg-gray-900 py-5">
     <div v-for="article in articles" :key="article.slug">
         <p>{{article.title}}</p>
  
@@ -23,29 +23,27 @@ export default {
   data() {
 
     return {
-      articles: [],
-      pointer: 0
+      newarticles: [],  
+      articles: []
     }
   },
 
   // fetch()
   async fetch() {
-    //const random = Math.floor(Math.random() * 7);
-    //alert(random)
+      const random = Math.floor(Math.random() * 7);
 
-    this.newarticles = await this.$content("articles")
-        .limit(3)
-        .skip(this.pointer)
-        .sortBy("slug", "desc")
-        .fetch()
-        .then((newarticles) => {
-            this.articles.push(...newarticles);
-            this.pointer += 3;
-            //alert(this.pointer)
+    this.newarticles = await this.$content("articles").limit(1).skip(random).fetch().then((newarticles) => {
+        // Do something with the results.
+        //alert(newarticles)
+        this.articles.push(...newarticles);
+        //this.articles = newarticles.map((x) => x);
 
-            //this.articles = newarticles.map((x) => x);
-        })
 
+    })
+    //newarticles.value.push(...articles);
+
+
+    //alert('hi')
   }
 
 
