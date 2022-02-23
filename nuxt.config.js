@@ -1,6 +1,8 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  telemetry: false,
+
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -25,6 +27,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: "~/plugins/vue-infinite-loading", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
