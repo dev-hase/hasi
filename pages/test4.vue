@@ -1,20 +1,20 @@
 <template>
-  <body class="bg-gray-200 py-5">
-    <div v-for="article in articles" :key="article.slug">
-        <p>{{article.title}}</p>
+  <body class="bg-green-400">
+
+    <div class="bg-green-600 text-center text-white text-7xl font-black p-6 ">Test Area</div>
+
+    <div v-for="article in articles" :key="article.slug" class="bg-green-200 p-6 rounded-md mx-auto my-5 w-4/5 flex justify-center flex-col md:flex-row">
+        <p class="font-black text-2xl py-2 md:pr-5">{{article.title}}</p>
  
-        <nuxt-img :src="'/img/' + article.pic" width="1024px" />
+        <nuxt-img :src="'/img/' + article.pic" width="1024px" class="border-2 border-black shadow-xl w-full md:w-3/4" />
                
         <nuxt-content :document="article" />
 
-        <div>{{article.description}}</div>
+        <div class="p-2 bg-black text-white font-medium md:w-1/4">{{article.description}}</div>
 
     </div>
 
-    <button @click="$fetch" class="bg-red-300 text-white font-bold p-2">klick!</button>
-
     <infinite-loading @infinite="infiniteHandler"></infinite-loading>
-
 
   </body>
 </template>
@@ -33,8 +33,6 @@ export default {
 
   // fetch()
   async fetch() {
-    //const random = Math.floor(Math.random() * 7);
-    //alert(random)
 
     this.newarticles = await this.$content("articles")
         .limit(2)
@@ -57,7 +55,7 @@ export default {
   methods: {
 
     infiniteHandler($state) {
-      alert(this.pointer);
+      //alert(this.pointer);
 
       setTimeout(async () => {
         //this.pointer += 3;
