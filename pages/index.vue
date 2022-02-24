@@ -1,31 +1,66 @@
 <template>
-  <body class="bg-gray-900 py-5">
-    <div v-for="page in pages" :key="page.slug" class="container mx-auto l:p-36">
-        <p class="pb-4 text-yellow-300 bg-gray-900 text-4xl text-center font-black">{{page.title}}</p>
- 
-        <nuxt-img :src="'/landingpage/' + page.pic" width="1024px" class="mx-auto" />
-               
-        <nuxt-content :document="page" />
+  <body class="bg-green-400">
 
-        <div class="w-2/3 mx-auto bg-gray-300 text-gray-900 p-2 m-4 shadow-xl rounded-md font-bold italic">{{page.description}}</div>
+    <div class="bg-green-600 text-center text-white text-7xl font-black p-6 ">Test Area</div>
+
+    <div v-for="article in articles" :key="article.slug" class="bg-green-200 p-6 rounded-md mx-auto my-5 w-4/5 flex justify-center flex-col md:flex-row">
+        <p class="font-black text-2xl py-2 md:pr-5">{{article.title}}</p>
+ 
+        <nuxt-img :src="'/img/' + article.pic" width="1024px" class="border-2 border-black shadow-xl w-full md:w-3/4" />
+               
+        <nuxt-content :document="article" />
+
+        <div class="p-2 bg-black text-white font-medium md:w-1/4">{{article.description}}</div>
 
     </div>
+
+    <infinite-loading @infinite="infiniteHandler"></infinite-loading>
+
   </body>
 </template>
 
 <script>
-export default {
-  name: 'IndexPage',
 
-  async asyncData ({ $content }) {
-    const pages = await $content('landing-page')
-      .sortBy("slug", "desc")
-      .fetch()
+export default {
+
+  data() {
 
     return {
-      pages
+      articles: [],
+      pointer: 0
     }
+  },
+
+  methods: {
+
+    infiniteHandler($state) {
+      //alert(this.pointer);
+
+      setTimeout(async () => {
+        this.newarticles = await this.$content("articles")
+          .limit(2)
+          .skip(this.pointer)
+          .sortBy("slug", "desc")
+          .fetch()        
+          .then((newarticles) => {
+              if (newarticles.length > 0) {
+                this.articles.push(...newarticles);
+                this.pointer += 2;
+                $state.loaded();
+                return { pointer, articles}
+              } else {
+                $state.complete();
+              }
+
+          })
+
+      }, 630);
+    }
+
   }
+
+  
 }
+
 </script>
 

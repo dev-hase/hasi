@@ -31,43 +31,21 @@ export default {
     }
   },
 
-  // fetch()
-  async fetch() {
-
-    this.newarticles = await this.$content("articles")
-        .limit(2)
-        .skip(this.pointer)
-        .sortBy("slug", "desc")
-        .fetch()
-        .then((newarticles) => {
-            if (newarticles.length > 0) {
-              this.articles.push(...newarticles);
-              this.pointer += 2;
-              $state.loaded();
-            } else {
-              $state.complete();
-            }
-
-        })
-
-  },
-
   methods: {
 
     infiniteHandler($state) {
       //alert(this.pointer);
 
       setTimeout(async () => {
-        //this.pointer += 3;
         this.newarticles = await this.$content("articles")
-          .limit(3)
+          .limit(2)
           .skip(this.pointer)
           .sortBy("slug", "desc")
           .fetch()        
           .then((newarticles) => {
               if (newarticles.length > 0) {
                 this.articles.push(...newarticles);
-                this.pointer += 3;
+                this.pointer += 2;
                 $state.loaded();
                 return { pointer, articles}
               } else {
@@ -76,7 +54,7 @@ export default {
 
           })
 
-      }, 500);
+      }, 630);
     }
 
   }
