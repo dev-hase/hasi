@@ -47,7 +47,15 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    //'@nuxtjs/cloudinary',
+
   ],
+
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/' + process.env.CLOUDNAME + '/image/upload/'
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

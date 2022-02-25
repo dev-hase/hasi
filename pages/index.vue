@@ -6,7 +6,7 @@
     <div v-for="article in articles" :key="article.slug" class="bg-green-200 p-6 rounded-md mx-auto my-5 w-4/5 flex justify-center flex-col md:flex-row">
         <p class="font-black text-2xl py-2 md:pr-5">{{article.title}}</p>
  
-        <nuxt-img :src="'/img/' + article.pic" width="1024px" class="border-2 border-black shadow-xl w-full md:w-3/4" />
+        <nuxt-img provider="cloudinary" :src="'hasi/' + article.pic" width="1024px" class="border-2 border-black shadow-xl w-full md:w-3/4" />
                
         <nuxt-content :document="article" />
 
@@ -27,7 +27,7 @@ export default {
 
     return {
       articles: [],
-      pointer: 0
+      pointer: 0,
     }
   },
 

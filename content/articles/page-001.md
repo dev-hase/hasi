@@ -1,6 +1,6 @@
 ---
 title: page 01
-description: Hase und Ente auf der Halde in Wattenscheid
-pic: IMG_0886.jpg
+description: Stiepeler Nucular Palmen
+pic: Stiepeler_Palmen_Nucular__h7gfob
 ---
 

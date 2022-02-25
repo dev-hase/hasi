@@ -1,5 +1,5 @@
 ---
 title: page 02
-description: Hase mit Hoodie
-pic: IMG_0917.jpg
+description: Ditschi Becken
+pic: Ditschi_Becken_v7fwxu
 ---

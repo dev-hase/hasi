@@ -1,5 +1,5 @@
 ---
 title: page 07
-description: Ente mit Kippe
-pic: Doofe_Ente.jpg
+description: Expeditionen II - Walking on the Moon
+pic: Expeditionen_II_cvt00t
 ---
