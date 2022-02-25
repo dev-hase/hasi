@@ -1,10 +1,10 @@
 <template>
-  <body class="bg-green-800">
+  <body class="bg-pink-900">
 
-    <div class="bg-green-600 text-center text-white text-7xl font-black p-6 ">Test Area</div>
+    <div class="bg-pink-700 text-center text-white text-7xl font-black p-6">HASI</div>
 
-    <div v-for="article in articles" :key="article.slug" class="bg-green-200 p-6 rounded-md mx-auto my-5 w-4/5 flex justify-center flex-col md:flex-row">
-        <p class="font-black text-2xl py-2 md:pr-5">{{article.title}}</p>
+    <div v-for="article in articles" :key="article.slug" class="p-6 mx-auto my-5 w-full md:w-4/5 flex justify-center flex-col md:flex-row">
+        <p class="text-gray-200 font-black text-2xl py-2 md:pr-5">{{article.title}}</p>
 
         <nuxt-img 
           provider="cloudinary" 
@@ -20,12 +20,12 @@
               
         <nuxt-content :document="article" />
 
-        <div class="p-2 bg-black text-white font-medium md:w-1/4">{{article.description}}</div>
+        <div class="p-2 bg-black text-gray-200 font-medium md:w-1/4">{{article.description}}</div>
 
     </div>
 
     <infinite-loading spinner="waveDots" @infinite="infiniteHandler">
-      <div slot="no-more" class="text-green-400 font-thinner text-sm">Ende!</div>
+      <div slot="no-more" class="text-pink-500 font-thinner text-sm">Ende!</div>
       <div slot="no-results">nix gefunden</div>
     </infinite-loading>
 

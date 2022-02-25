@@ -1,5 +1,5 @@
 ---
-title: page 01
+title: bild 01
 description: Stiepeler Nucular Palmen
 pic: Stiepeler_Palmen_Nucular__h7gfob
 ---
