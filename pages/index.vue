@@ -1,20 +1,33 @@
 <template>
-  <body class="bg-green-400">
+  <body class="bg-green-800">
 
     <div class="bg-green-600 text-center text-white text-7xl font-black p-6 ">Test Area</div>
 
     <div v-for="article in articles" :key="article.slug" class="bg-green-200 p-6 rounded-md mx-auto my-5 w-4/5 flex justify-center flex-col md:flex-row">
         <p class="font-black text-2xl py-2 md:pr-5">{{article.title}}</p>
- 
-        <nuxt-img provider="cloudinary" :src="'hasi/' + article.pic" width="1024px" class="border-2 border-black shadow-xl w-full md:w-3/4" />
-               
+
+        <nuxt-img 
+          provider="cloudinary" 
+          :src="'hasi/' + article.pic" 
+          sizes="xs:300px sm:400px md:600px lg:1000px xl:1400px"
+          dpr="auto"
+          crop="fill"
+          fetchFormat="auto"
+          quality="auto"
+          loading="lazy"  
+          class="border-2 border-black shadow-xl w-full md:w-3/4"
+        />
+              
         <nuxt-content :document="article" />
 
         <div class="p-2 bg-black text-white font-medium md:w-1/4">{{article.description}}</div>
 
     </div>
 
-    <infinite-loading @infinite="infiniteHandler"></infinite-loading>
+    <infinite-loading spinner="waveDots" @infinite="infiniteHandler">
+      <div slot="no-more" class="text-green-400 font-thinner text-sm">Ende!</div>
+      <div slot="no-results">nix gefunden</div>
+    </infinite-loading>
 
   </body>
 </template>
@@ -63,4 +76,5 @@ export default {
 }
 
 </script>
+
 
