@@ -53,7 +53,7 @@ export default {
 
   image: {
     cloudinary: {
-      baseURL: 'https://res.cloudinary.com/' + process.env.CLOUDNAME + '/image/upload/'
+      baseURL: 'https://res.cloudinary.com/dqaa3oaod/image/upload/'
     }
   },
 
