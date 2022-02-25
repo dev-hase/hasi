@@ -9,7 +9,7 @@
         <nuxt-img 
           provider="cloudinary" 
           :src="'hasi/' + article.pic" 
-          sizes="xs:300px sm:400px md:600px lg:1000px xl:1400px"
+          width="1200px"
           dpr="auto"
           crop="fill"
           fetchFormat="auto"
@@ -67,7 +67,7 @@ export default {
 
           })
 
-      }, 630);
+      }, 500);
     }
 
   }
