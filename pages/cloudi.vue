@@ -6,17 +6,7 @@
     <div v-for="article in articles" :key="article.slug" class="p-6 mx-auto my-5 w-full md:w-4/5 flex justify-center flex-col md:flex-row">
         <p class="text-gray-200 font-black text-md py-2 md:pr-5">{{article.title}}</p>
 
-        <nuxt-img 
-          provider="cloudinary" 
-          :src="'hasi/' + article.pic" 
-          width="1200px"
-          dpr="auto"
-          crop="fill"
-          fetchFormat="auto"
-          quality="auto"
-          loading="lazy"  
-          class="border-4 border-black w-full md:w-3/4"
-        />
+        <cloudimage :image="article.pic"></cloudimage>
               
         <nuxt-content :document="article" />
 
@@ -76,7 +66,3 @@ export default {
 }
 
 </script>
-
-
-
-

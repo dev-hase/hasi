@@ -47,9 +47,14 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    //'@nuxtjs/cloudinary',
+    '@nuxtjs/cloudinary',
 
   ],
+
+  cloudinary: {
+    cloudName: 'dqaa3oaod',
+    useComponent: true //use Vue components
+  },
 
   image: {
     cloudinary: {
