@@ -5,12 +5,13 @@
           provider="cloudinary" 
           :src="cldimage"
           preload
-          sizes="sm:640px lg:1024px xxl:1600px"
+          sizes="sm:100vw md:100vw lg:100vw xxl:100vw"
           dpr="auto"
           crop="fill"
           fetchFormat="auto"
           quality="auto"
           class="border-4 border-black w-full"
+          width="100%"
         />        
 
     </div>    
