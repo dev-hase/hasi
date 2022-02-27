@@ -1,24 +1,17 @@
 <template>
     <div>
 
-
-        <picture>
-            <img
-            sizes="(max-width: 1690px) 100vw, 1690px"
-            :srcset="src620 + ' 620w, ' + src1270 + ' 1270w,' + src1690 + ' 1690w'"
-            :src="src"
-            :alt="image" />
-        </picture>
-
-
         <nuxt-img 
           provider="cloudinary" 
           :src="cldimage"
           preload
           sizes="sm:640px lg:1024px xxl:1600px"
-          class="border-4 border-black w-full md:w-3/4"
+          dpr="auto"
+          crop="fill"
+          fetchFormat="auto"
+          quality="auto"
+          class="border-4 border-black w-full"
         />        
-
 
     </div>    
 </template>
