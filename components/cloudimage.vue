@@ -11,15 +11,6 @@
         </picture>
 
 
-        <nuxt-img 
-          provider="cloudinary" 
-          :src="cldimage"
-          preload
-          sizes="sm:640px lg:1024px xxl:1600px"
-          class="border-4 border-black w-full md:w-3/4"
-        />        
-
-
     </div>    
 </template>
 

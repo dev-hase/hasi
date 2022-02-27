@@ -27,53 +27,5 @@ export default {
     }
     },
 
-    computed: {
-        src() {
-        return this.$cloudinary.image.url(
-            this.cldimage,
-            {
-            gravity: 'auto:subject',
-            crop: 'fill',
-            width: '2000',
-            }
-        )
-        },
-
-        src620() {
-        return this.$cloudinary.image.url(
-            this.cldimage,
-            {
-            gravity: 'auto:subject',
-            crop: 'fill',
-            width: '620',
-            }
-        )
-        },
-
-        src1270() {
-        return this.$cloudinary.image.url(
-            this.cldimage,
-            {
-            gravity: 'auto:subject',
-            crop: 'fill',
-            width: '1270',
-            }
-        )
-        },
-
-        src1690() {
-        return this.$cloudinary.image.url(
-            this.cldimage,
-            {
-            gravity: 'auto:subject',
-            crop: 'fill',
-            width: '1690',
-            }
-        )
-        },
-        
-    }
-
-
 };  
 </script>
