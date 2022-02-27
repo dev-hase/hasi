@@ -11,7 +11,7 @@
           fetchFormat="auto"
           quality="auto"
           class="border-4 border-black w-full"
-          width="100%"
+          width="1024px"
         />        
 
     </div>    
