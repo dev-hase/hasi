@@ -1,6 +1,7 @@
 ---
 title: Expeditionen
 description: Ausflüge an den Rand des Unvorstellbaren
+class: stories-mystic
 ---
 
 ...zwei Gestalten, bereit an Orte zu gehen, an denen sie zuvor noch nie waren...
