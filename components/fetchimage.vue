@@ -10,9 +10,9 @@
           crop="fill"
           fetchFormat="auto"
           quality="auto"
-          class="border-4 border-black w-full"
+          class="w-full"
           width="1024px"
-        />        
+        />      
 
     </div>    
 </template>
@@ -20,11 +20,11 @@
 <script>  
 export default {
 
-    props: ["image"],
+    props: ["folder", "image"],
 
     data () {
     return {
-        cldimage: 'hasi/' + this.image,
+        cldimage: this.folder + this.image,
     }
     },
 
