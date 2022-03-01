@@ -14,12 +14,16 @@ class: stories-mystic
 
 <fetchimage folder="hasi/" image="Expeditionen_II_cvt00t"></fetchimage>
 
-...danach dann einen *Wüstenplanet*. In Allem was nicht bedeckt war, sammelt sich der feine Sand...
+...danach geht es dann weiter zum berühmten *Wüstenplanet*. In Allem was nicht bedeckt ist, sammelt sich der feine Sand...
 
 <fetchimage folder="hasi/" image="Expeditionen_I_repdar"></fetchimage>
 
 ...auch der *Mars* darf nicht fehlen! Die rauhe Umgebung erfordert besondere Schutzkleidung...
 
 <fetchimage folder="hasi/" image="Expeditionen_III_rabo2j"></fetchimage>
+
+...manchmal ist die *Strahlung* so stark, dass es kaum voran geht.
+
+<fetchimage folder="hasi/" image="Neutronenente__dw3fyh"></fetchimage>
 
 *Wohin* wird es wohl als nächstes gehen???

@@ -18,4 +18,6 @@ Derweil nähert sich dem Stadtpark ein riesiges rotes *Ungestüm*...
 
 <fetchimage folder="hasi/" image="Fackel_Im_Schnee_sidqoy"></fetchimage>
 
+<fetchimage folder="hasi/" image="monster_ttlcjv"></fetchimage>
+
 ...wieder mal!
