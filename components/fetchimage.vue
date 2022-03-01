@@ -10,7 +10,7 @@
           crop="fill"
           fetchFormat="auto"
           quality="auto"
-          class="w-full"
+          class="para w-full"
           width="1024px"
         />      
 
@@ -18,15 +18,30 @@
 </template>
 
 <script>  
+import simpleParallax from 'simple-parallax-js';
+
 export default {
 
     props: ["folder", "image"],
 
     data () {
-    return {
-        cldimage: this.folder + this.image,
-    }
+        return {
+            cldimage: this.folder + this.image,
+        }
     },
+
+    mounted() {
+        var image = document.getElementsByClassName('para');
+        new simpleParallax(image, {
+	        maxTransition: 80,
+            delay: .6,
+	        transition: 'cubic-bezier(0,0,0,1)',
+            scale: 1.05,
+            orientation: 'up-right'
+
+        });
+    },
+
 
 };  
 </script>

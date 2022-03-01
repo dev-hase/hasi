@@ -32,6 +32,7 @@
 import Pageheader from "../components/pageheader.vue";
 
 export default {
+
     data() {
         return {
             articles: [],
