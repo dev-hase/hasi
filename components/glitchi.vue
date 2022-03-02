@@ -1,7 +1,7 @@
 <template>
 
         <div class="hero-container">
-            <span class="hero glitch layers" :data-text="glitch">{{glitch}}</span>
+            <span class="hero glitch layers" :data-text="slottext"><slot></slot></span>
         </div>
 
 </template>
@@ -10,7 +10,11 @@
 
 export default {
 
-    props: ["glitch"],
+    data () {
+        return {
+            slottext: this.$slots.default[0].text,
+        }
+    },    
 
 }
 
@@ -26,6 +30,7 @@ export default {
   color: #fff;
   z-index: 2;
 
+  filter: drop-shadow(0 1px 2px);
 }
 
 .layers {

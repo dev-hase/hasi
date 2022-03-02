@@ -7,9 +7,9 @@
 
         <div class="articleheader mt-16 mx-5 mt-10 w-3/4 lg:w-3/5">
 
-            <h1 class="pt-4 text-5xl md:text-6xl text-gray-200 font-black"><glitchi :glitch="article.title" /></h1>
+            <h1 class="pt-4 text-5xl md:text-6xl text-gray-200 font-black"><glitchi>{{article.title}}</glitchi></h1>
 
-            <div class="pt-4 pb-10 text-md md:text-xl text-gray-200 font-thinnest"><glitchi :glitch="article.description" /></div>
+            <div class="pt-4 pb-10 text-md md:text-xl text-gray-200 font-thinnest"><glitchi>{{article.title}}</glitchi></div>
 
         </div>
  
