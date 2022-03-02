@@ -49,7 +49,8 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/cloudinary',
-    'nuxt-precompress'
+    'nuxt-precompress',
+    'nuxt-fullpage.js',
     
 
   ],

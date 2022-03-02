@@ -9,7 +9,7 @@
 
             <h1 class="pt-4 text-5xl md:text-6xl text-gray-200 font-black"><glitchi :glitch="article.title" /></h1>
 
-            <div class="pt-4 pb-10 text-md md:text-xl text-gray-200 font-thinnest">{{article.description}}</div>
+            <div class="pt-4 pb-10 text-md md:text-xl text-gray-200 font-thinnest"><glitchi :glitch="article.description" /></div>
 
         </div>
  
@@ -69,16 +69,39 @@ export default {
 
 <style>
 
+html {
+    background: #831843;
+}
+
 .stories-mystic {
     background: #831843;
+}
+
+.stories-mystic em{
+    background: #eee;
+    color: #831843;
+    padding: .25rem .5rem
 }
 
 .stories-fresh {
     background: #077a5d;
 }
 
+.stories-fresh em{
+    background: #eee;
+    color: #077a5d;
+    padding: .25rem .5rem
+}
+
 .stories-dark {
     background: #060219;
+}
+
+.stories-dark em{
+    background: #eee;
+    color: #060219;
+    padding: .25rem .5rem
+
 }
 
 .storie {
@@ -116,11 +139,6 @@ export default {
   }
 }
 
-.nuxt-content em {
-    font-weight: thin;
-    color: #831843;
-    background: #fff;
-    padding: .1rem .5rem;
-}
+
 
 </style>
