@@ -19,6 +19,7 @@
     "nuxt-precompress": "^0.5.9",
     "serve-static": "^1.14.1",
     "simple-parallax-js": "^5.6.2",
+    "splitting": "^1.0.6",
     "vue": "^2.6.14",
     "vue-infinite-loading": "^2.4.5",
     "vue-server-renderer": "^2.6.14",
@@ -29,6 +30,8 @@
     "@nuxt/image": "^0.6.2",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "postcss": "^8.4.4",
+    "sass": "^1.49.9",
+    "sass-loader": "^10.2.1",
     "stylus": "^0.56.0",
     "stylus-loader": "4.3.3"
   }

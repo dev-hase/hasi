@@ -5,9 +5,9 @@
 
     <div v-for="article in articles" :key="article.slug" :class="'storie mx-auto w-full flex flex-autojustify-center flex-col ' + article.class">
 
-        <div class="articleheader mx-5 mt-10 w-3/4 lg:w-3/5">
+        <div class="articleheader mt-16 mx-5 mt-10 w-3/4 lg:w-3/5">
 
-            <h1 class="pt-4 text-5xl md:text-7xl md:tracking-wider text-gray-200 font-black">{{article.title}}</h1>
+            <h1 class="pt-4 text-5xl md:text-6xl text-gray-200 font-black"><glitchi :glitch="article.title" /></h1>
 
             <div class="pt-4 pb-10 text-md md:text-xl text-gray-200 font-thinnest">{{article.description}}</div>
 
@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import Pageheader from "../components/pageheader.vue";
 
 export default {
 
@@ -60,10 +59,10 @@ export default {
                         $state.complete();
                     }
                 });
-            }, 500);
+            }, 750);
         }
     },
-    components: { Pageheader }
+
 }
 
 </script>
@@ -97,7 +96,7 @@ export default {
 @media screen and (min-width: 1200px) {
 
   .storie {
-      padding: 0 27.5%;
+      padding: 0 22.5%;
   }
 
 }

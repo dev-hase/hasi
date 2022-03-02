@@ -36,7 +36,7 @@ export default {
 	        maxTransition: 80,
             delay: .6,
 	        transition: 'cubic-bezier(0,0,0,1)',
-            scale: 1.05,
+            scale: 1.075,
             orientation: 'up-right'
 
         });
