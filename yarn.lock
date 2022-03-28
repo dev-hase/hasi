@@ -3898,15 +3898,15 @@ destr@^1.0.0, destr@^1.1.0:
   resolved "https://registry.npmjs.org/destr/-/destr-1.1.0.tgz"
   integrity sha512-Ev/sqS5AzzDwlpor/5wFCDu0dYMQu/0x2D6XfAsQ0E7uQmamIgYJ6Dppo2T2EOFVkeVYWjc+PCLKaqZZ57qmLg==
 
+destroy@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
+  integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
+
 destroy@^1.0.4:
   version "1.1.0"
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.1.0.tgz"
   integrity sha512-R5QZrOXxSs0JDUIU/VANvRJlQVMts9C0L76HToQdPdlftfZCE7W6dyH0G4GZ5UW9fRqUOhAoCE2aGekuu+3HjQ==
-
-destroy@~1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz"
-  integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
 detab@^2.0.4:
   version "2.0.4"
@@ -5163,17 +5163,6 @@ http-assert@^1.3.0:
     deep-equal "~1.0.1"
     http-errors "~1.8.0"
 
-http-errors@1.8.1, http-errors@^1.6.3, http-errors@^1.7.3, http-errors@~1.8.0:
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/http-errors/-/http-errors-1.8.1.tgz"
-  integrity sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==
-  dependencies:
-    depd "~1.1.2"
-    inherits "2.0.4"
-    setprototypeof "1.2.0"
-    statuses ">= 1.5.0 < 2"
-    toidentifier "1.0.1"
-
 http-errors@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tgz"
@@ -5183,6 +5172,17 @@ http-errors@2.0.0:
     inherits "2.0.4"
     setprototypeof "1.2.0"
     statuses "2.0.1"
+    toidentifier "1.0.1"
+
+http-errors@^1.6.3, http-errors@^1.7.3, http-errors@~1.8.0:
+  version "1.8.1"
+  resolved "https://registry.npmjs.org/http-errors/-/http-errors-1.8.1.tgz"
+  integrity sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==
+  dependencies:
+    depd "~1.1.2"
+    inherits "2.0.4"
+    setprototypeof "1.2.0"
+    statuses ">= 1.5.0 < 2"
     toidentifier "1.0.1"
 
 http-errors@~1.6.2:
@@ -7103,6 +7103,13 @@ ohmyfetch@^0.4.15:
     node-fetch "^3.0.0"
     ufo "^0.7.9"
     undici "^4.9.5"
+
+on-finished@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.4.1.tgz#58c8c44116e54845ad57f14ab10b03533184ac3f"
+  integrity sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==
+  dependencies:
+    ee-first "1.1.1"
 
 on-finished@^2.3.0:
   version "2.4.0"
@@ -9117,24 +9124,24 @@ semver@^7.3.2, semver@^7.3.4, semver@^7.3.5:
   dependencies:
     lru-cache "^6.0.0"
 
-send@0.17.2:
-  version "0.17.2"
-  resolved "https://registry.npmjs.org/send/-/send-0.17.2.tgz"
-  integrity sha512-UJYB6wFSJE3G00nEivR5rgWp8c2xXvJ3OPWPhmuteU0IKj8nKbG3DrjiOmLwpnHGYWAVwA69zmTm++YG0Hmwww==
+send@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/send/-/send-0.18.0.tgz#670167cc654b05f5aa4a767f9113bb371bc706be"
+  integrity sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==
   dependencies:
     debug "2.6.9"
-    depd "~1.1.2"
-    destroy "~1.0.4"
+    depd "2.0.0"
+    destroy "1.2.0"
     encodeurl "~1.0.2"
     escape-html "~1.0.3"
     etag "~1.8.1"
     fresh "0.5.2"
-    http-errors "1.8.1"
+    http-errors "2.0.0"
     mime "1.6.0"
     ms "2.1.3"
-    on-finished "~2.3.0"
+    on-finished "2.4.1"
     range-parser "~1.2.1"
-    statuses "~1.5.0"
+    statuses "2.0.1"
 
 sentence-case@^3.0.4:
   version "3.0.4"
@@ -9173,15 +9180,15 @@ serve-placeholder@^1.2.3:
   dependencies:
     defu "^5.0.0"
 
-serve-static@^1.14.1:
-  version "1.14.2"
-  resolved "https://registry.npmjs.org/serve-static/-/serve-static-1.14.2.tgz"
-  integrity sha512-+TMNA9AFxUEGuC0z2mevogSnn9MXKb4fa7ngeRMJaaGv8vTwnIEkKi+QGvPt33HSnf8pRS+WGM0EbMtCJLKMBQ==
+serve-static@^1.14.1, serve-static@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.15.0.tgz#faaef08cffe0a1a62f60cad0c4e513cff0ac9540"
+  integrity sha512-XGuRDNjXUijsUL0vl6nSD7cwURuzEgglbOaFuZM9g3kwDXOWVTck0jLzjPzGD+TazWbboZYu52/9/XPdUgne9g==
   dependencies:
     encodeurl "~1.0.2"
     escape-html "~1.0.3"
     parseurl "~1.3.3"
-    send "0.17.2"
+    send "0.18.0"
 
 server-destroy@^1.0.1:
   version "1.0.1"
